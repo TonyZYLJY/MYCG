@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:id="@+id/drawer_layout"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:fitsSystemWindows="true"
+   tools:openDrawer="start"
+   tools:context=".aboutUsPage">
+
+   <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <android.support.constraint.ConstraintLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="@null">
+
+         <include
+            android:id="@+id/top_toolbar"
+            layout="@layout/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"/>
+
+         <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="0dp"
+            android:layout_height="59dp"
+            android:background="@null"
+            app:layout_constraintBottom_toTopOf="@+id/scroll_projects"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/top_toolbar">
+
+            <ImageView
+               android:id="@+id/sei_logo"
+               android:layout_width="331dp"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:scaleType="fitXY"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:srcCompat="@mipmap/seilogo" />
+         </RelativeLayout>
+
+         <ScrollView
+            android:id="@+id/scroll_projects"
+            android:layout_width="0dp"
+            android:layout_height="426dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+            <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <TextView
+                  android:id="@+id/space4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+
+               <TextView
+                  android:id="@+id/MyCG_heading"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="MyCG"
+                  android:textColor="@color/commonColor"
+                  android:textSize="24sp"
+                  android:textStyle="bold" />
+
+               <TextView
+                  android:id="@+id/mycg_body"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="A mobile application that enables students, faculty, and staff to order their favorite drinks and desserts from Common Grounds, the on-campus coffee shop." />
+
+               <TextView
+                  android:id="@+id/space"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+
+               <TextView
+                  android:id="@+id/Checkit_heading"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="CheckIT"
+                  android:textColor="@android:color/holo_red_dark"
+                  android:textSize="24sp"
+                  android:textStyle="bold" />
+
+               <TextView
+                  android:id="@+id/checkit_body"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="A web-based application that generates dynamic plans of study with recommendations of when to take various courses based on majors, minors, pre-requisites, course rotations, and academic load restrictions." />
+
+               <TextView
+                  android:id="@+id/space2"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+
+               <TextView
+                  android:id="@+id/noHorizon"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="No-Horizon"
+                  android:textColor="@android:color/holo_blue_dark"
+                  android:textSize="24sp"
+                  android:textStyle="bold" />
+
+               <TextView
+                  android:id="@+id/noHorizon_body"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="A stand-alone game application that allows players to set sail, play mini games, loot other players, and upgrade their ships in a multiplayer, open-world environment." />
+
+               <TextView
+                  android:id="@+id/space3"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+
+               <TextView
+                  android:id="@+id/mystryOnBLane"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Mystery On Brent Lane"
+                  android:textSize="24sp"
+                  android:textStyle="bold"
+                  tools:layout_editor_absoluteY="260dp" />
+
+               <TextView
+                  android:id="@+id/mysteryOnBLane_body"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="A stand-alone game application based on the classic game of Clue that involves a missing unbrella and a college campus somewhere in Northwest Florida..." />
+            </LinearLayout>
+         </ScrollView>
+
+      </android.support.constraint.ConstraintLayout>
+   </FrameLayout>
+   <android.support.design.widget.NavigationView
+      android:id="@+id/nav_view"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_gravity="start"
+      android:fitsSystemWindows="true"
+      app:headerLayout="@layout/nav_header_main"
+      app:menu="@menu/activity_main_drawer" >
+
+   </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
+

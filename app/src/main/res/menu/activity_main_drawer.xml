@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Menu"
+
+            android:title="Menu" />
+        <item
+            android:id="@+id/Order_history"
+
+            android:title="Order History" />
+        <item
+            android:id="@+id/Rewards"
+
+            android:title="Rewards" />
+        <item
+            android:id="@+id/Favorites"
+
+            android:title="Favorites" />
+
+        <item
+            android:id="@+id/Account"
+
+            android:title="Account" />
+       <item
+          android:id="@+id/About_us"
+
+          android:title="About SEI Projects" />
+
+        <item
+            android:id="@+id/Log_out"
+
+            android:title="Log Out" />
+    </group>
+
+</menu>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+   package="com.example.a125688.americano">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+       android:allowBackup="true"
+       android:background="@color/white"
+       android:hardwareAccelerated="false"
+       android:icon="@mipmap/appicon"
+       android:label="MyCG"
+       android:largeHeap="true"
+       android:supportsRtl="true"
+       android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+           android:name=".Home"
+           android:screenOrientation="portrait">
+           <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+
+              <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>
+        </activity>
+        <activity
+           android:name=".Menu"
+           android:screenOrientation="portrait">
+
+           <!--
+                <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+
+               <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+              -->
+        </activity>
+        <activity android:name=".IcedCoffeePage" />
+       <activity android:name=".SmoothiePage" />
+        <activity android:name=".CoffeePage" />
+        <activity android:name=".Frappe" />
+       <activity android:name=".Tea" />
+        <activity android:name=".Chocolate" />
+        <activity android:name=".Espresso" />
+        <activity android:name=".Desserts" />
+       <activity android:name=".Change_password" />
+        <activity android:name=".CartPage" />
+        <activity android:name=".checkOutPage" />
+        <activity android:name=".creditCardPaymentPage" />
+        <activity android:name=".fulfillOrder" />
+        <activity android:name=".aboutUsPage" />
+        <activity android:name=".favoritePage" />
+       <activity android:name=".AccountPage" />
+       <activity android:name=".Rewards" />
+        <activity android:name=".OrderHistory"></activity>
+    </application>
+
+</manifest>

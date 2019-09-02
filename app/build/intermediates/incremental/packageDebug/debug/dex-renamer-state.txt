@@ -1,0 +1,4 @@
+#Mon Apr 16 14:28:44 CDT 2018
+base.0=/Users/jinye/Desktop/UpdatedMyCG0416/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

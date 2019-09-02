@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".IcedCoffeePage"
+    tools:openDrawer="start">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp">
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:fitsSystemWindows="true"
+            tools:context=".Menu"
+            tools:openDrawer="start">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/icedCoffeeBt"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:background="@android:color/background_light"
+                            android:contentDescription="@string/chocolate"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/icedcoffee" />
+
+                        <ImageButton
+                            android:id="@+id/HotTeaBt"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:background="@android:color/background_light"
+                            android:contentDescription="@string/coffee1"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/hottea" />
+
+                        <ImageButton
+                            android:id="@+id/SmoothiesBt"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:background="@android:color/background_light"
+                            android:contentDescription="@string/coffee2"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/smoothie" />
+
+                       <ImageButton
+                          android:id="@+id/CoffeeBt"
+                          android:layout_width="match_parent"
+                          android:layout_height="130dp"
+                          android:background="@android:color/background_light"
+                          android:contentDescription="@string/coffee7"
+                          android:scaleType="fitXY"
+                          app:srcCompat="@mipmap/coffee1" />
+
+                        <ImageButton
+                            android:id="@+id/FrappeBt"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:background="@android:color/background_light"
+                            android:contentDescription="@string/coffee3"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/frappe" />
+
+                        <ImageButton
+                            android:id="@+id/ChocolateBt"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:background="@android:color/background_light"
+                            android:contentDescription="@string/coffee4"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/chocolate" />
+
+                        <ImageButton
+                            android:id="@+id/EspressoBt"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:background="@android:color/background_light"
+                            android:contentDescription="@string/coffee5"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/espresso" />
+
+                        <ImageButton
+                            android:id="@+id/DessertsBt"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:background="@android:color/background_light"
+                            android:contentDescription="@string/coffee6"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@mipmap/desserts" />
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </FrameLayout>
+            <android.support.design.widget.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:fitsSystemWindows="true"
+                app:headerLayout="@layout/nav_header_main"
+                app:menu="@menu/activity_main_drawer" />
+        </android.support.v4.widget.DrawerLayout>
+    </RelativeLayout>
+</RelativeLayout>
+
+
+

@@ -1,0 +1,46 @@
+<resources>
+   <string name="app_name">Common Grounds</string>
+   <string name="chocolate">chocolate</string>
+   <string name="coffee1">coffee1</string>
+   <string name="coffee2">coffee2</string>
+   <string name="coffee3">coffee3</string>
+   <string name="coffee4">coffee4</string>
+   <string name="coffee5">coffee5</string>
+   <string name="coffee6">coffee6</string>
+   <string name="coffee7">coffee7</string>
+   <string name="Dairy">coffee7</string>
+
+   <string-array name="coffee_choices">
+      <item>Mercury</item>
+      <item>Venus</item>
+      <item>Earth</item>
+      <item>Mars</item>
+      <item>Jupiter</item>
+      <item>Saturn</item>
+      <item>Uranus</item>
+      <item>Neptune</item>
+   </string-array>
+   <string name="title_activity_menu_slide_in">MenuSlideIn</string>
+   <string name="title_home">Home</string>
+   <string name="title_dashboard">Dashboard</string>
+   <string name="title_notifications">Notifications</string>
+   <string name="title_activity_login">Sign in</string>
+
+   <!-- Strings related to login -->
+   <string name="prompt_email">Email</string>
+   <string name="prompt_password">Password (optional)</string>
+   <string name="action_sign_in">Sign in or register</string>
+   <string name="action_sign_in_short">Sign in</string>
+   <string name="error_invalid_email">This email address is invalid</string>
+   <string name="error_invalid_password">This password is too short</string>
+   <string name="error_incorrect_password">This password is incorrect</string>
+   <string name="error_field_required">This field is required</string>
+   <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+   <string name="change_password">Change Password</string>
+   <string name="navigation_drawer_open">Open navigation drawer</string>
+   <string name="navigation_drawer_close">Close navigation drawer</string>
+
+   <string name="action_settings">Settings</string>
+</resources>

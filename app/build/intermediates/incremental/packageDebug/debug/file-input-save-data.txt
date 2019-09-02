@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Mon Apr 16 14:28:44 CDT 2018
+0.baseType=DIRECTORY
+0.base=/Users/jinye/Desktop/UpdatedMyCG0416/app/build/intermediates/transforms/dexMerger/debug/0
+0.path=classes.dex
+0.set=DEX
+count=1

@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Frappe"
+    tools:openDrawer="start">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+           <ScrollView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/background_light">
+
+              <android.support.constraint.ConstraintLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="@color/white"
+                 android:orientation="vertical">
+
+                 <ImageView
+                    android:id="@+id/frappe"
+                    android:layout_width="match_parent"
+                    android:layout_height="115dp"
+                    android:layout_marginTop="56dp"
+                    android:background="@android:color/background_light"
+                    android:contentDescription="@string/coffee1"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/frappe" />
+
+                 <ImageView
+                    android:id="@+id/caramel"
+                    android:layout_width="145dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.112"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frappe"
+                    app:srcCompat="@drawable/new_caramel" />
+
+                 <ImageButton
+                    android:id="@+id/onePlusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/caramel"
+                    app:layout_constraintEnd_toEndOf="@+id/caramel"
+                    app:layout_constraintHorizontal_bias="0.78"
+                    app:layout_constraintStart_toStartOf="@+id/caramel"
+                    app:layout_constraintTop_toTopOf="@+id/caramel"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/plussign" />
+
+                 <ImageButton
+                    android:id="@+id/oneMinusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/caramel"
+                    app:layout_constraintEnd_toEndOf="@+id/caramel"
+                    app:layout_constraintHorizontal_bias="0.192"
+                    app:layout_constraintStart_toStartOf="@+id/caramel"
+                    app:layout_constraintTop_toTopOf="@+id/caramel"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/minussign" />
+
+                 <TextView
+                    android:id="@+id/oneShowQuantity"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignBottom="@+id/plusButton"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    app:layout_constraintBottom_toBottomOf="@+id/caramel"
+                    app:layout_constraintEnd_toEndOf="@+id/caramel"
+                    app:layout_constraintHorizontal_bias="0.57"
+                    app:layout_constraintStart_toStartOf="@+id/caramel"
+                    app:layout_constraintTop_toTopOf="@+id/caramel"
+                    app:layout_constraintVertical_bias="0.981" />
+
+                 <ImageView
+                    android:id="@+id/double_chocolate"
+                    android:layout_width="145dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.891"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frappe"
+                    app:srcCompat="@drawable/new_doublechoco" />
+
+                 <ImageButton
+                    android:id="@+id/twoPlusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/double_chocolate"
+                    app:layout_constraintEnd_toEndOf="@+id/double_chocolate"
+                    app:layout_constraintHorizontal_bias="0.78"
+                    app:layout_constraintStart_toStartOf="@+id/double_chocolate"
+                    app:layout_constraintTop_toTopOf="@+id/double_chocolate"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/plussign" />
+
+                 <ImageButton
+                    android:id="@+id/twoMinusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/double_chocolate"
+                    app:layout_constraintEnd_toEndOf="@+id/double_chocolate"
+                    app:layout_constraintHorizontal_bias="0.192"
+                    app:layout_constraintStart_toStartOf="@+id/double_chocolate"
+                    app:layout_constraintTop_toTopOf="@+id/double_chocolate"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/minussign" />
+
+                 <TextView
+                    android:id="@+id/twoShowQuantity"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignBottom="@+id/plusButton"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    app:layout_constraintBottom_toBottomOf="@+id/double_chocolate"
+                    app:layout_constraintEnd_toEndOf="@+id/double_chocolate"
+                    app:layout_constraintHorizontal_bias="0.57"
+                    app:layout_constraintStart_toStartOf="@+id/double_chocolate"
+                    app:layout_constraintTop_toTopOf="@+id/double_chocolate"
+                    app:layout_constraintVertical_bias="0.981" />
+
+                 <ImageView
+                    android:id="@+id/frozen_hot_chocolate"
+                    android:layout_width="145dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.112"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/caramel"
+                    app:srcCompat="@drawable/new_frozenhotchoco" />
+
+                 <ImageButton
+                    android:id="@+id/threePlusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/frozen_hot_chocolate"
+                    app:layout_constraintEnd_toEndOf="@+id/caramel"
+                    app:layout_constraintHorizontal_bias="0.78"
+                    app:layout_constraintStart_toStartOf="@+id/frozen_hot_chocolate"
+                    app:layout_constraintTop_toTopOf="@+id/frozen_hot_chocolate"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/plussign" />
+
+                 <ImageButton
+                    android:id="@+id/threeMinusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/frozen_hot_chocolate"
+                    app:layout_constraintEnd_toEndOf="@+id/frozen_hot_chocolate"
+                    app:layout_constraintHorizontal_bias="0.192"
+                    app:layout_constraintStart_toStartOf="@+id/frozen_hot_chocolate"
+                    app:layout_constraintTop_toTopOf="@+id/frozen_hot_chocolate"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/minussign" />
+
+                 <TextView
+                    android:id="@+id/threeShowQuantity"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignBottom="@+id/plusButton"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    app:layout_constraintBottom_toBottomOf="@+id/frozen_hot_chocolate"
+                    app:layout_constraintEnd_toEndOf="@+id/frozen_hot_chocolate"
+                    app:layout_constraintHorizontal_bias="0.57"
+                    app:layout_constraintStart_toStartOf="@+id/frozen_hot_chocolate"
+                    app:layout_constraintTop_toTopOf="@+id/frozen_hot_chocolate"
+                    app:layout_constraintVertical_bias="0.981" />
+
+                 <ImageView
+                    android:id="@+id/java"
+                    android:layout_width="148dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.891"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/double_chocolate"
+                    app:srcCompat="@drawable/new_java" />
+
+                 <ImageButton
+                    android:id="@+id/fourPlusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/java"
+                    app:layout_constraintEnd_toEndOf="@+id/java"
+                    app:layout_constraintHorizontal_bias="0.78"
+                    app:layout_constraintStart_toStartOf="@+id/java"
+                    app:layout_constraintTop_toTopOf="@+id/java"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/plussign" />
+
+                 <ImageButton
+                    android:id="@+id/fourMinusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/java"
+                    app:layout_constraintEnd_toEndOf="@+id/java"
+                    app:layout_constraintHorizontal_bias="0.192"
+                    app:layout_constraintStart_toStartOf="@+id/java"
+                    app:layout_constraintTop_toTopOf="@+id/java"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/minussign" />
+
+                 <TextView
+                    android:id="@+id/fourShowQuantity"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignBottom="@+id/plusButton"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    app:layout_constraintBottom_toBottomOf="@+id/java"
+                    app:layout_constraintEnd_toEndOf="@+id/java"
+                    app:layout_constraintHorizontal_bias="0.57"
+                    app:layout_constraintStart_toStartOf="@+id/java"
+                    app:layout_constraintTop_toTopOf="@+id/java"
+                    app:layout_constraintVertical_bias="0.981" />
+
+                 <ImageView
+                    android:id="@+id/oreo"
+                    android:layout_width="145dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.112"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frozen_hot_chocolate"
+                    app:srcCompat="@drawable/new_oreo" />
+
+                 <ImageButton
+                    android:id="@+id/fivePlusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/oreo"
+                    app:layout_constraintEnd_toEndOf="@+id/oreo"
+                    app:layout_constraintHorizontal_bias="0.78"
+                    app:layout_constraintStart_toStartOf="@+id/oreo"
+                    app:layout_constraintTop_toTopOf="@+id/oreo"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/plussign" />
+
+                 <ImageButton
+                    android:id="@+id/fiveMinusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/oreo"
+                    app:layout_constraintEnd_toEndOf="@+id/oreo"
+                    app:layout_constraintHorizontal_bias="0.192"
+                    app:layout_constraintStart_toStartOf="@+id/oreo"
+                    app:layout_constraintTop_toTopOf="@+id/oreo"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/minussign" />
+
+                 <TextView
+                    android:id="@+id/fiveShowQuantity"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignBottom="@+id/plusButton"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    app:layout_constraintBottom_toBottomOf="@+id/oreo"
+                    app:layout_constraintEnd_toEndOf="@+id/oreo"
+                    app:layout_constraintHorizontal_bias="0.57"
+                    app:layout_constraintStart_toStartOf="@+id/oreo"
+                    app:layout_constraintTop_toTopOf="@+id/oreo"
+                    app:layout_constraintVertical_bias="0.981" />
+
+                 <ImageView
+                    android:id="@+id/peanut_butter"
+                    android:layout_width="145dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.891"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/java"
+                    app:srcCompat="@drawable/new_peanutbutter" />
+
+                 <ImageButton
+                    android:id="@+id/sixPlusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/peanut_butter"
+                    app:layout_constraintEnd_toEndOf="@+id/peanut_butter"
+                    app:layout_constraintHorizontal_bias="0.78"
+                    app:layout_constraintStart_toStartOf="@+id/peanut_butter"
+                    app:layout_constraintTop_toTopOf="@+id/peanut_butter"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/plussign" />
+
+                 <ImageButton
+                    android:id="@+id/sixMinusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/peanut_butter"
+                    app:layout_constraintEnd_toEndOf="@+id/peanut_butter"
+                    app:layout_constraintHorizontal_bias="0.192"
+                    app:layout_constraintStart_toStartOf="@+id/peanut_butter"
+                    app:layout_constraintTop_toTopOf="@+id/peanut_butter"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/minussign" />
+
+                 <TextView
+                    android:id="@+id/sixShowQuantity"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignBottom="@+id/plusButton"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    app:layout_constraintBottom_toBottomOf="@+id/peanut_butter"
+                    app:layout_constraintEnd_toEndOf="@+id/peanut_butter"
+                    app:layout_constraintHorizontal_bias="0.57"
+                    app:layout_constraintStart_toStartOf="@+id/peanut_butter"
+                    app:layout_constraintTop_toTopOf="@+id/peanut_butter"
+                    app:layout_constraintVertical_bias="0.981" />
+
+                 <ImageView
+                    android:id="@+id/raspberry_white"
+                    android:layout_width="145dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.112"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/oreo"
+                    app:srcCompat="@drawable/new_rasbpberrywhite" />
+
+                 <ImageButton
+                    android:id="@+id/sevenPlusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/raspberry_white"
+                    app:layout_constraintEnd_toEndOf="@+id/raspberry_white"
+                    app:layout_constraintHorizontal_bias="0.78"
+                    app:layout_constraintStart_toStartOf="@+id/raspberry_white"
+                    app:layout_constraintTop_toTopOf="@+id/raspberry_white"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/plussign" />
+
+                 <ImageButton
+                    android:id="@+id/sevenMinusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/raspberry_white"
+                    app:layout_constraintEnd_toEndOf="@+id/raspberry_white"
+                    app:layout_constraintHorizontal_bias="0.192"
+                    app:layout_constraintStart_toStartOf="@+id/raspberry_white"
+                    app:layout_constraintTop_toTopOf="@+id/raspberry_white"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/minussign" />
+
+                 <TextView
+                    android:id="@+id/sevenShowQuantity"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignBottom="@+id/plusButton"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    app:layout_constraintBottom_toBottomOf="@+id/raspberry_white"
+                    app:layout_constraintEnd_toEndOf="@+id/raspberry_white"
+                    app:layout_constraintHorizontal_bias="0.57"
+                    app:layout_constraintStart_toStartOf="@+id/raspberry_white"
+                    app:layout_constraintTop_toTopOf="@+id/raspberry_white"
+                    app:layout_constraintVertical_bias="0.981" />
+
+                 <ImageView
+                    android:id="@+id/white_choco"
+                    android:layout_width="145dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.891"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/peanut_butter"
+                    app:srcCompat="@drawable/new_whitechoco" />
+
+                 <ImageButton
+                    android:id="@+id/eightPlusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/white_choco"
+                    app:layout_constraintEnd_toEndOf="@+id/white_choco"
+                    app:layout_constraintHorizontal_bias="0.78"
+                    app:layout_constraintStart_toStartOf="@+id/white_choco"
+                    app:layout_constraintTop_toTopOf="@+id/white_choco"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/plussign" />
+
+                 <ImageButton
+                    android:id="@+id/eightMinusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/white_choco"
+                    app:layout_constraintEnd_toEndOf="@+id/white_choco"
+                    app:layout_constraintHorizontal_bias="0.192"
+                    app:layout_constraintStart_toStartOf="@+id/white_choco"
+                    app:layout_constraintTop_toTopOf="@+id/white_choco"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/minussign" />
+
+                 <TextView
+                    android:id="@+id/eightShowQuantity"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignBottom="@+id/plusButton"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    app:layout_constraintBottom_toBottomOf="@+id/white_choco"
+                    app:layout_constraintEnd_toEndOf="@+id/white_choco"
+                    app:layout_constraintHorizontal_bias="0.57"
+                    app:layout_constraintStart_toStartOf="@+id/white_choco"
+                    app:layout_constraintTop_toTopOf="@+id/white_choco"
+                    app:layout_constraintVertical_bias="0.981" />
+
+                 <ImageView
+                    android:id="@+id/peanut_butter_white"
+                    android:layout_width="145dp"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.112"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/raspberry_white"
+                    app:srcCompat="@drawable/peanutbutterwhite" />
+
+                 <ImageButton
+                    android:id="@+id/ninePlusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/peanut_butter_white"
+                    app:layout_constraintEnd_toEndOf="@+id/peanut_butter_white"
+                    app:layout_constraintHorizontal_bias="0.78"
+                    app:layout_constraintStart_toStartOf="@+id/peanut_butter_white"
+                    app:layout_constraintTop_toTopOf="@+id/peanut_butter_white"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/plussign" />
+
+                 <ImageButton
+                    android:id="@+id/nineMinusButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/peanut_butter_white"
+                    app:layout_constraintEnd_toEndOf="@+id/peanut_butter_white"
+                    app:layout_constraintHorizontal_bias="0.192"
+                    app:layout_constraintStart_toStartOf="@+id/peanut_butter_white"
+                    app:layout_constraintTop_toTopOf="@+id/peanut_butter_white"
+                    app:layout_constraintVertical_bias="0.94"
+                    app:srcCompat="@mipmap/minussign" />
+
+                 <CheckBox
+                    android:id="@+id/favCaramel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="112dp"
+                    android:layout_marginTop="8dp"
+                    android:button="@drawable/favorite"
+                    android:longClickable="true"
+                    app:layout_constraintEnd_toEndOf="@+id/caramel"
+                    app:layout_constraintStart_toStartOf="@+id/caramel"
+                    app:layout_constraintTop_toTopOf="@+id/caramel" />
+
+                 <CheckBox
+                    android:id="@+id/favDoubleChocolate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="112dp"
+                    android:layout_marginTop="8dp"
+                    android:button="@drawable/favorite"
+                    android:longClickable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/double_chocolate"
+                    app:layout_constraintTop_toTopOf="@+id/double_chocolate" />
+
+                 <CheckBox
+                    android:id="@+id/favJava"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="112dp"
+                    android:layout_marginTop="8dp"
+                    android:button="@drawable/favorite"
+                    android:longClickable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/java"
+                    app:layout_constraintTop_toTopOf="@+id/java"  />
+
+                 <CheckBox
+                    android:id="@+id/favFrozenHotChocolate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="112dp"
+                    android:layout_marginTop="8dp"
+                    android:button="@drawable/favorite"
+                    android:longClickable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/frozen_hot_chocolate"
+                    app:layout_constraintTop_toTopOf="@+id/frozen_hot_chocolate"  />
+
+                 <CheckBox
+                    android:id="@+id/favOreo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="112dp"
+                    android:layout_marginTop="8dp"
+                    android:button="@drawable/favorite"
+                    android:longClickable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/oreo"
+                    app:layout_constraintTop_toTopOf="@+id/oreo"  />
+
+                 <CheckBox
+                    android:id="@+id/favPeanutButter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="112dp"
+                    android:layout_marginTop="8dp"
+                    android:button="@drawable/favorite"
+                    android:longClickable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/peanut_butter"
+                    app:layout_constraintTop_toTopOf="@+id/peanut_butter"  />
+
+                 <CheckBox
+                    android:id="@+id/favRaspberryWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="112dp"
+                    android:layout_marginTop="8dp"
+                    android:button="@drawable/favorite"
+                    android:longClickable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/raspberry_white"
+                    app:layout_constraintTop_toTopOf="@+id/raspberry_white"  />
+
+                 <CheckBox
+                    android:id="@+id/favWhiteChocolate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="112dp"
+                    android:layout_marginTop="8dp"
+                    android:button="@drawable/favorite"
+                    android:longClickable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/white_choco"
+                    app:layout_constraintTop_toTopOf="@+id/white_choco"  />
+
+                 <CheckBox
+                    android:id="@+id/favPeanutButterWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="112dp"
+                    android:layout_marginTop="8dp"
+                    android:button="@drawable/favorite"
+                    android:longClickable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/peanut_butter_white"
+                    app:layout_constraintTop_toTopOf="@+id/peanut_butter_white" />
+
+
+                 <TextView
+                    android:id="@+id/nineShowQuantity"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignBottom="@+id/plusButton"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    app:layout_constraintBottom_toBottomOf="@+id/peanut_butter_white"
+                    app:layout_constraintEnd_toEndOf="@+id/peanut_butter_white"
+                    app:layout_constraintHorizontal_bias="0.57"
+                    app:layout_constraintStart_toStartOf="@+id/peanut_butter_white"
+                    app:layout_constraintTop_toTopOf="@+id/peanut_butter_white"
+                    app:layout_constraintVertical_bias="0.981" />
+
+
+              </android.support.constraint.ConstraintLayout>
+
+           </ScrollView>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/commonColor"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+           <TextView
+              android:id="@+id/textViewFrappe"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:layout_marginTop="8dp"
+              android:background="@color/commonColor"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/frappePrice"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Price"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+           <Button
+              android:id="@+id/addCart"
+              style="@style/Widget.AppCompat.Button"
+              android:layout_width="151dp"
+              android:layout_height="30dp"
+              android:layout_marginBottom="1dp"
+              android:layout_marginEnd="6dp"
+              android:layout_marginStart="50dp"
+              android:layout_marginTop="520dp"
+              android:background="@color/common_google_signin_btn_text_dark_default"
+              android:fontFamily="sans-serif"
+              android:text="Add to Cart >>"
+              android:textColor="@color/commonColor"
+              android:textSize="16sp"
+              android:textStyle="bold"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="1.0"
+              app:layout_constraintStart_toEndOf="@+id/storeTotal"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintVertical_bias="0.666" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </FrameLayout>
+
+   <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" >
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
